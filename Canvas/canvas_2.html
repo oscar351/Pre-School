@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+    <title>Image 클립</title>
+</head>
+
+<body onload="draw()">
+    <canvas id="gallery" width="500" height="500"></canvas>
+    <div style="visibility:hidden;">
+        <img id="source" src="../image/flower.jpg" width="500" height="375" />
+        <img id="frame" src="../image/frame.png" width="330" height="254" />
+    </div>
+</body>
+
+</html>
+<script type="application/javascript">
+    function draw() {
+        var canvas = document.getElementById('gallery');
+        var img_flower = document.getElementById('source');
+        var img_frame = document.getElementById('frame');
+        var cntx = canvas.getContext('2d');
+        cntx.drawImage(img_frame, 30, 30);
+        cntx.drawImage(img_flower, 100, 100, 500, 375, 168, 65, 158, 160);
+
+    }
+</script>
+</script>

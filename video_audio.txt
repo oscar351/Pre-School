@@ -1,0 +1,3 @@
+<video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" controls></video>
+
+<audio src="https://ccrma.stanford.edu/~jos/mp3/harpsi-cs.mp3" controls loop autoplay></audio>

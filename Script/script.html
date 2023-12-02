@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+    <title>스크립트</title>
+    <script>
+        var report = {};
+        report.국어 = 90;
+        report.수학 = 95;
+        report.영어 = 90;
+        report.체육 = 80;
+        report.print = function () {
+            var output = '';
+            for (var key in this) {
+                if (key !== 'print') {
+                    output += key + " : " + this[key] + '\n';
+                }
+            }
+            return output;
+        }
+        alert(report.print());
+        delete (report.체육);
+        alert(report.print());
+    </script>
+</head>
+<body onload="report.print()">
+</body>
+
+</html>

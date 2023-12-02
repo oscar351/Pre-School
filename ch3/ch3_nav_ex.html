@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Horizontal Navigation</title>
+    <style>
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+        }
+
+        /* :target을 사용하여 선택된 탭의 내용만 보이도록 함 */
+        .content:target {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#homeContent">Home</a>
+    <a href="#aboutContent">About</a>
+    <a href="#contactContent">Contact</a>
+</nav>
+
+<!-- 각 메뉴에 대응하는 내용 -->
+<div id="homeContent" class="content">
+    <h2>Home Content</h2>
+    <p>This is the content for the Home page.</p>
+</div>
+
+<div id="aboutContent" class="content">
+    <h2>About Content</h2>
+    <p>This is the content for the About page.</p>
+</div>
+
+<div id="contactContent" class="content">
+    <h2>Contact Content</h2>
+    <p>This is the content for the Contact page.</p>
+</div>
+
+</body>
+</html>

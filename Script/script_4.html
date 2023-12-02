@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+    <title>스크립트</title>
+    <script type="text/javascript">
+        function setwidth() {
+            var input = document.getElementById('widthData').value;
+            var img = document.getElementById('image');
+            img.setAttribute("width", input);
+        }
+
+        function getwidth() {
+            var img = document.getElementById('image');
+            var width = img.getAttribute("width");
+            var p = document.getElementById("output");
+            p.innerHTML = "넓이 : " + width;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <img id="image" src="../image/tiger.jpg" width="500" height="500"/>
+        <br>
+        <button onclick='setwidth()'>set width</button>
+        <input type="number" id="widthData">
+        <button onclick='getwidth()'>get width</button>
+        <p id="output"></p>
+    </div>
+</body>
+
+</html>

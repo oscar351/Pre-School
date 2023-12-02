@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>세미나신청폼</title>
+    <style>
+        body {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- 1번 : 세미나 신청 헤드 -->
+        <h1>2023년 세미나 신청</h1>
+        <h4>교육기관 : (주)모블에듀</h4>
+        <h4>신청마감 : 2023년 11월 17일 오후 6시</h4>
+    </header>
+    <form>
+
+        <fieldset>
+            <!-- 2번 : 신청상세정보 -->
+            <legend>신청 상세 정보 선택</legend>
+            <li>
+                <label for="semina">세미나</label>
+                <input id="setobj" type="text" list="object">
+                <datalist id="object">
+                    <option value="webApp" label="웹앱프로그래밍">
+                    <option value="HTML5" label="HTML5">
+                    <option value="android" label="안드로이드 어플리케이션 개발">
+                </datalist>
+            </li>
+            <li>
+                <label for="setdate">일정선택</label>
+                <input id="setdate" type="date">
+            </li>
+            <li>
+                <label for="settime">과정선택</label>
+                <input id="settime" type="text" list="semtime">
+                <datalist id="semtime">
+                    <option value="주간오전" label="주간오전">
+                    <option value="주간오후" label="주간오후">
+                    <option value="주말종일" label="주말종일">
+                </datalist>
+            </li>
+        </fieldset>
+
+        <fieldset>
+            <!-- 3번 : 신청하는 사람 -->
+            <legend>신청하는 사람</legend>
+            <li>
+                <label for="name">이름</label>
+                <input id=name type="text" placeholder="홍길동" required autofocus>
+            </li>
+            <li>
+                <label for=email>메일주소</label>
+                <input id="email" type="email" placeholder="kdhong@email.com" required>
+            </li>
+            <li>
+                <label for="phone">전화번호</label>
+                <input id="phone" name="phone" placeholder="02-1234-5678" required>
+            </li>
+            <li>
+                <label for="address">주소</label>
+                <textarea id="address" name="address" rows="5" required></textarea>
+            </li>
+        </fieldset>
+
+        <fieldset>
+            <!-- 4번 : 신청인원 -->
+            <li>
+                <label for="order">신청 인원</label>
+                <input type="number" id="order" value="1">
+            </li>
+        </fieldset>
+
+        <fieldset>
+            <input type="submit" formmethod="post" action="/buy" value="신청하기">
+            <input type="submit" formmethod="post" action="/back" formnovalidate value="취소하기">
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
